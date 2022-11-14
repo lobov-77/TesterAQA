@@ -1,3 +1,9 @@
-number = int(input('enter number:'))
 
-print(number)
+n = int(input())
+
+c = n % 10
+n = n // 10
+b = n % 10
+a = n // 10
+
+print (c, b, a)
