@@ -1,10 +1,10 @@
+number = int(input('Введите трехзначное число:'))
 
-number = int(input('введите трехзначное число:'))
+reversed_number = 0
 
-c = number % 10
-number = number // 10
-b = number % 10
-a = number // 10
+while number > 0:
+    last_number = number % 10
+    reversed_number = (reversed_number * 10) + last_number
+    number = number // 10
 
-reversed_number = (c, b, a)
-print(f'reserved number is: {reversed_number}')
+print(f'Reserved number is: {reversed_number}')
