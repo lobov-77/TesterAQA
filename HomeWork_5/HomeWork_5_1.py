@@ -1,6 +1,3 @@
-text = input('Enter some word:')
-if text == text[::-1]:
-    print('+')
-else:
-    print('-')
-
+n = int(input('Enter numbers of stars:'))
+for i in range(n, 0, -1):
+    print('*' * i)

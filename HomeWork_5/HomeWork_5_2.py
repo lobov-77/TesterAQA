@@ -1,6 +1,4 @@
-text = input('Enter some text, please:')
-f = input('Find word is:')
-if f in text:
-    print('Yes')
-else:
-    print('No')
+n = int(input('Enter numbers of stars:'))
+for q in range(1, n+1):
+    print('*' * q)
+

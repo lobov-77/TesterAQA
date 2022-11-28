@@ -1,7 +1,3 @@
-text = input('Enter some text:')
-if text.startswith('abc'):
-    text_2 = text.replace('abc', 'www')
-    print(text_2)
-else:
-    text_3 = text + 'zzz'
-    print(text_3)
+n = int(input('Enter numbers of stars:'))
+for i in range(n, 0, -1):
+    print(' ' * (n - i) + '*' * i)
