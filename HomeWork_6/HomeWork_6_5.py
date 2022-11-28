@@ -1,5 +1,5 @@
 email = input('Enter your email, please:')
-if '@' and '.' not in email:
+if '@' and '.' not in email :
     print('No')
 elif '@' and '.' in email:
     print('Yes')
