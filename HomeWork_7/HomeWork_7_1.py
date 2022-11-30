@@ -6,6 +6,6 @@ try:
     fouth = int(input('Enter fouth number:'))
     fivth = int(input('Enter fivth number:'))
     n = [first, second, third, fouth, fivth]
-    print(n[::-1])
+    print(n)
 except Exception as e:
     print('Enter a digit please')
