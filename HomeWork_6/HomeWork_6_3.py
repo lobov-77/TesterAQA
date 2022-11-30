@@ -1,7 +1,5 @@
 text = input('Enter some text:')
 if text.startswith('abc'):
-    text_2 = text.replace('abc', 'www')
-    print(text_2)
+    print(text.replace('abc', 'www', 1))
 else:
-    text_3 = text + 'zzz'
-    print(text_3)
+    print(text + 'zzz')
