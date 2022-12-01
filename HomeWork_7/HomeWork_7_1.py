@@ -1,11 +1,9 @@
 n = []
 try:
-    first = int(input('Enter first number:'))
-    second = int(input('Enter second numbe:'))
-    third = int(input('Enter third number:'))
-    fouth = int(input('Enter fouth number:'))
-    fivth = int(input('Enter fivth number:'))
-    n = [first, second, third, fouth, fivth]
+    for num in range(5):
+        x = int(input('Enter a numer: '))
+        n.append(x)
     print(n)
 except Exception as e:
     print('Enter a digit please')
+
