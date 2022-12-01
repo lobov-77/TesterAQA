@@ -6,4 +6,3 @@ try:
     print(n)
 except Exception as e:
     print('Enter a digit please')
-
