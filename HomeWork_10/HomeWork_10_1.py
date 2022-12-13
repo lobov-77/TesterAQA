@@ -1,13 +1,9 @@
-# def change_list():
+def change(lst):
+    new_start = lst.pop()
+    new_end = lst.pop(0)
+    lst.append(new_end)
+    lst.insert(0, new_start)
+    return lst
 
 
-def change_list():
-    A = []
-    N = int(input('Enter a digit: '))
-    for num in range(N):
-        x = int(input('Enter a numer: '))
-        A.append(x)
-    print(A[::-1])
-
-
-change_list()
+print(change([1, 2, 3, 4, 5]))
