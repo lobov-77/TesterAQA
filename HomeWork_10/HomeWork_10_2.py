@@ -1,5 +1,6 @@
 def to_dict(lst):
-    return {element: element for element in lst}
+    if isinstance(lst, list):
+        return {element: element for element in lst}
 
 
 x = input('Enter something to list: ')
