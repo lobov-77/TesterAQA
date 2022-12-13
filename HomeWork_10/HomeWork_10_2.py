@@ -1,4 +1,6 @@
-def to_dict(lst):
+def to_dict(lst=None):
+    if lst is None:
+        lst = []
     if isinstance(lst, list):
         return {element: element for element in lst}
 
