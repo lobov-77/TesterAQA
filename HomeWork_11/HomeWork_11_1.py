@@ -44,7 +44,12 @@ dict.clear(counter)
 for i in range(15):
     doo()
 
+
+name_first_file = 'File foo.txt'
+name_second_file = 'File calls.txt'
+
 file = open('foo.txt').read()
 second_file = open('calls.txt').read()
 
-print(f'{file}{second_file}')
+
+print(f'{name_first_file}:\n{file}\n{name_second_file}:\n{second_file}')
