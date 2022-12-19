@@ -1,41 +1,47 @@
-class Person:
-
-    def __init__(self):
-        self.address = None
-        self.phone = None
-        self.age = None
-        self.name = None
-        self.surname = None
-
-    def get_info(self, name: str, surname: str, age: int, phone_number: str, address: str):
-        pass
+class Human:
+    def __init__(self, name, surname, age, phone, address):
+        self.name = name
+        self.surname = surname
+        self.age = age
+        self.phone = phone
+        self.address = address
 
     def get_info(self):
-        pass
+        return {
+            'name': self.name,
+            'surname': self.surname,
+            'age': self.age,
+            'phone': self.phone,
+            'address': self.address
+        }
 
     def call(self, phone_number):
-        pass
+        print(f"{self.phone} вызывает абонента {phone_number}")
 
 
-david = Person()
-david.name = 'David'
-david.surname = 'Backham'
-david.age = 45
-david.phone_number = '+44 2074012860'
-david.address = 'London'
+david = Human(
+    name='David',
+    surname='Backham',
+    age=45,
+    phone='+44 2074012860',
+    address='London')
 
-# tom = Person()
-# tom.name = 'Tom'
-# tom.surname = 'Cruise'
-# tom.age = 60
-# tom.phone_number = '+12 127363100'
-# tom.address = 'New York'
+tom = Human(
+    name='Tom',
+    surname='Cruise',
+    age=60,
+    phone='+12 127363100',
+    address='New York')
 
-# kylian = Person()
-# kylian.name = 'Kylian'
-# kylian.surname = 'Mbape'
-# kylian.age = 23
-# kylian.phone_number = '+33 140205050'
-# kylian.address = 'Paris'
+kylian = Human(
+    name='Kylian',
+    surname='Mbape',
+    age=23,
+    phone='+33 140205050',
+    address='Paris')
 
+print(david.get_info())
+print(tom.get_info())
+print(kylian.get_info())
 
+print((david.call('875897587')))
