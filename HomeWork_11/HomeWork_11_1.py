@@ -1,15 +1,18 @@
-counter = {}
 text = 'Function {} was called {} times.\n'
+counter = {}
 
 
 def call_times(file_name):
     def inner(func):
         def wrapper():
             wrapper.count += 1
-            counter[func.__name__] = wrapper.count
+            if not file_name in counter:
+                counter[file_name] = {}
+            counter[file_name][func.__name__] = wrapper.count
             with open(file_name, 'w') as f:
-                for func_name, quantity in counter.items():
+                for func_name, quantity in counter[file_name].items():
                     f.write(text.format(func_name, quantity))
+
             return func()
 
         wrapper.count = 0
@@ -33,23 +36,17 @@ def doo():
     pass
 
 
-for i in range(5):
-    foo()
-
-for i in range(10):
-    boo()
-
-dict.clear(counter)
-
-for i in range(15):
-    doo()
-
+foo()
+boo()
+foo()
+foo()
+boo()
+doo()
 
 name_first_file = 'File foo.txt'
 name_second_file = 'File calls.txt'
 
-file = open('foo.txt').read()
+ffile = open('foo.txt').read()
 second_file = open('calls.txt').read()
 
-
-print(f'{name_first_file}:\n{file}\n{name_second_file}:\n{second_file}')
+print(f'{name_first_file}:\n{ffile}\n{name_second_file}:\n{second_file}')
