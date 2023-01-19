@@ -35,5 +35,3 @@ def test_form(chrome):
     result_ca = driver.find_element(By.XPATH, '//p[@id="currentAddress"]').text
     result_pa = driver.find_element(By.XPATH, '//p[@id="permanentAddress"]').text
     pass
-
-

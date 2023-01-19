@@ -14,4 +14,3 @@ def chrome_headless():
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
     yield webdriver.Chrome(chrome_options=options)
-
