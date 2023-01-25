@@ -50,7 +50,7 @@ def test_form(text_fields):
     assert all(assert_data_fields)
 
 
-def invalid_email(text_fields):
+def test_invalid_email(text_fields):
     driver.get('https://demoqa.com/text-box')
     email_field = driver.find_element(By.CSS_SELECTOR, EMAIL_FIELD)
     submit_button = driver.find_element(By.CSS_SELECTOR, SUBMIT_BUTTON)
