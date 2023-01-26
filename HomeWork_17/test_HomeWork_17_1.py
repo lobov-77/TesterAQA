@@ -49,7 +49,6 @@ def test_form(text_fields):
 
 
 def test_invalid_email(text_fields):
-    driver.get('https://demoqa.com/text-box')
     email_field = driver.find_element(By.XPATH, EMAIL_FIELD)
     submit_button = driver.find_element(By.XPATH, SUBMIT_BUTTON)
 

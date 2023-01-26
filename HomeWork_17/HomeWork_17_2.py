@@ -19,7 +19,6 @@ def text_fields():
 
 
 def test_form(text_fields):
-    driver.get('https://demoqa.com/text-box')
     name_field = driver.find_element(By.CSS_SELECTOR, FULL_NAME_FIELD)
     email_field = driver.find_element(By.CSS_SELECTOR, EMAIL_FIELD)
     current_address_field = driver.find_element(By.CSS_SELECTOR, CURRENT_ADDRESS_FIELD)
@@ -51,7 +50,6 @@ def test_form(text_fields):
 
 
 def test_invalid_email(text_fields):
-    driver.get('https://demoqa.com/text-box')
     email_field = driver.find_element(By.CSS_SELECTOR, EMAIL_FIELD)
     submit_button = driver.find_element(By.CSS_SELECTOR, SUBMIT_BUTTON)
 
