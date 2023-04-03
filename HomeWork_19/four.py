@@ -8,11 +8,11 @@ parser.add_argument('--help', '-h', action='store_true')
 args = parser.parse_args()
 
 if args.help:
-    print('Тут могла бути ваша... допомога =)')
+    print('Some text')
 
 if args.name is not None:
-    if args.name == 'Валєнтін':
-        print('Валєнтін, японскій бог, ти зачєм у ката яйца-та аткрутіл?!')
+    if args.name == 'Oleksandr':
+        print('Another text')
     else:
         print(f'Welcome, {args.name}!')
 
