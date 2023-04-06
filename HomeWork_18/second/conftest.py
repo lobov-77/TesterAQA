@@ -9,7 +9,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 @pytest.fixture
 def get_chrome_options():
     options = chrome_options()
-    #options.add_argument('--headless') #Use --headless if you don't need browser UI
     options.add_argument('--window-size=1080,1080')
     return options
 
@@ -33,9 +32,9 @@ def setup(request, get_webdriver):
 
 @pytest.fixture(scope='function', autouse=True)
 def start_end_test():
-    print('\nSTART TEST')
+    print('\nThis is start')
     yield
-    print('\nEND TEST')
+    print('\nFinish')
 
 
 @pytest.fixture(scope='function')
